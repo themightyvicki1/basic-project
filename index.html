@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍪🍪🍪</title>
+    <style>
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        color: #975a5e;
+        text-decoration: underline;
+        font-weight: 800;
+      }
+      h2 {
+        color: #453953;
+        border: 1px dashed #f3cba5;
+        padding: 10px 0px;
+        font-size: 20px;
+        border-radius: 3px;
+        border-width: 3px;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      body {
+        background: linear-gradient(
+          90.7deg,
+          rgb(255, 253, 218) 1.9%,
+          rgb(246, 210, 255) 39.3%,
+          rgb(152, 222, 254) 64.7%,
+          rgb(251, 255, 210) 100.8%
+        );
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        padding: 15px;
+        max-width: 75%;
+        border-radius: 6px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        font-size: 22px;
+        line-height: 22px;
+        padding: 16px 24px;
+        transition: all 200ms ease-in-out;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        border-radius: 30px;
+        cursor: pointer;
+        border: 1px solid #004445;
+        background: #2c786c;
+        color: #faf5e4;
+      }
+
+      button:hover {
+        background: #f3cba5;
+        /* change the color of the text of the button when you hover it */
+        color: #453953;
+        /* adds border / edits what the default border is, copied from button to keep the border the same when hovered */
+        border: 1px solid #453953;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 18px;
+        cursor: crosshair;
+        font-family: monospace;
+        color: #975a5e;
+      }
+
+      .paragraph {
+        font-size: 24px;
+        color: #453953;
+      }
+
+      .below {
+        font-size: 22px;
+        color: #2c786c;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>
+        <hr />
+        Baking as self care!
+      </h1>
+      <h2><em>It is a therapeutic experience </em>😊<br /></h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/094/103/original/IMG_0736.JPG?1692572965"
+        alt="S'mores chocolate chip cookies"
+        width="500"
+      />
+
+      <p class="paragraph">
+        <br />
+        Baking is a form of self care due to following a step by step process
+        that makes you more mindful, the repetition is calming, and it offers an
+        escape from the day to day stresses. <br />Often times people think they
+        won't be any good at baking so they don't even try, but like everything
+        else in life, it just takes a little time, practice, and patience 😊<br />
+        <span class="below"
+          >Click below for a free recipe so you can practice baking as self care
+          for yourself.</span
+        >
+      </p>
+      <a
+        href="https://www.bhg.com/recipes/desserts/baking-therapy/"
+        target="_blank"
+        class="learn-more"
+      >
+        <strong>Learn more about baking as self care here</strong></a
+      >
+
+      <button>🍪 Click for recipe 🍪</button>
+
+      <hr />
+      <p class="footer">
+        <br />
+        This page was built by Victoria Greer
+      </p>
+    </div>
+
+    <script>
+      function clickForRecipe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+
+        if (name.length > 0) {
+          alert("Thank you, " + name + " we will email you a recipe to try");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Happy baking";
+        } else {
+          alert("You did not enter a valid name, please try again");
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Error ☹";
+        }
+      }
+      let recipeButton = document.querySelector("button");
+      recipeButton.addEventListener("click", clickForRecipe);
+    </script>
+  </body>
+</html>
